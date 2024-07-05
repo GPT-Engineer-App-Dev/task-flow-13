@@ -37,7 +37,7 @@ const Sidebar = () => (
       <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
         <NavLink to="/" className="flex items-center gap-2 font-semibold">
           <Package2 className="h-6 w-6" />
-          <span>Acme Inc</span>
+          <span>Todo App</span> {/* Change app name */}
         </NavLink>
       </div>
       <div className="flex-1">
@@ -49,6 +49,22 @@ const Sidebar = () => (
             </SidebarNavLink>
           ))}
         </nav>
+        <div className="mt-4 px-2 lg:px-4">
+          <h2 className="text-lg font-semibold mb-2">Projects</h2>
+          {/* List of projects */}
+          <ul className="space-y-2">
+            <li className="flex items-center space-x-2">
+              <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+              <span>Project 1</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Project 2</span>
+            </li>
+            {/* Add more projects here */}
+          </ul>
+          <button className="mt-2 text-blue-500 underline">Add Project</button>
+        </div>
       </div>
     </div>
   </div>
@@ -69,7 +85,7 @@ const MobileSidebar = () => (
           className="flex items-center gap-2 text-lg font-semibold mb-4"
         >
           <Package2 className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <span className="sr-only">Todo App</span> {/* Change app name */}
         </NavLink>
         {navItems.map((item) => (
           <SidebarNavLink key={item.to} to={item.to}>
